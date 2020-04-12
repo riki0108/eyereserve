@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+body{
+    background-color: #f0f1f4;
+}
+
+#logo{
+    width:20%;
+    margin:0 auto;
+    margin-top:4%;
+    margin-bottom:2%;
+    text-align: center;
+}
+
+#main{
+    background-color: white;
+    width:40%;
+    margin:0 auto;
+    border-radius: 1%;
+}
+
+/* エラーメッセージボックスの編集 */
+#login #errorMsg{
+    width:85%;
+    margin:0 auto;
+    padding-bottom:5%;
+}
+#registration #errorMsg{
+    width:80%;
+    margin:0 auto;
+    padding-top:4%;
+}
+#errorMsg ul li{
+    color:#f87e7e;
+}
+
+#tabcontrol{
+    display: flex;
+    justify-content: space-around;
+}
+#tabcontrol a{
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+    border-right: 2px solid #f0f1f4;
+}
+/* 一番最後の要素のボーダーを消す */
+#tabcontrol a:last-of-type{
+    border: none;
+}
+/* idの下層にあるaタグでクラスがactiveの場合 */
+#tabcontrol a.active{
+    border-bottom: 2px solid #f0f1f4;
+}
+.none{
+    display: none;
+}
+
+
+/* ログイン画面のデザイン */
+#login{
+    padding:5%;
+}
+#login form{
+    text-align: center;
+}
+#login form input{
+    margin-bottom:3%;
+    padding:2%;
+    width:85%;
+    outline: none;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size:14px;
+}
+/* 入力欄をファーカスしたときに色を変える */
+#login form input:focus,
+#registration form input:focus{
+    box-shadow: 0 0 7px #3498db;
+    border: 1px solid #3498db;
+}
+/* パスワードをお忘れですか？ */
+#login a{
+    font-size:13px;
+    display:block;
+    margin-left:50%;
+    text-decoration: underline;
+}
+/* 送信ボタンのデザイン */
+#login form input[type="submit"],
+#registration form input[type="submit"]{
+    display       : inline-block;
+    font-size     : 14pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 14px 0px;   /* 余白       */
+    background    : #11baae;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    opacity       : 0.9;         /* 透明度     */
+    transition    : .3s;         /* なめらか変化 */
+}
+#login form input[type="submit"]:hover,
+#registration form input[type="submit"]:hover{
+    opacity: 0.7;
+}
+
+
+/* 登録画面のデザイン */
+#registration form{
+    margin: 0 auto 10px;
+    width:85%;
+    padding:3%;
+    color: #384539;
+}
+#registration form>label{
+    display:block;
+    margin-top:2%;
+    padding: 0.25em 0.5em;/*上下 左右の余白*/
+    font-size: 16px;
+    width: 100%;
+    border-left: solid 5px #7db4e6;/*左線*/
+}
+#registration form input{
+    margin-bottom:5%;
+    padding:2%;
+    width:100%;
+    outline: none;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size:14px;
+}
+#registration .errorMsg{
+    display:block;
+    color:red;
+    margin-bottom:5%;
+}
+
+/* 氏名の部分のデザイン */
+#registration .name-box input{
+    width:48%;
+}
+#registration .name-box input:nth-child(2),
+#registration .name-box input:nth-child(4){
+    margin-left: 3%;
+}
+#registration .name-box{
+    display: flex;
+}
+/* 性別の部分のデザイン */
+#registration .gender{
+    width:40%;
+}
+/* 郵便番号の部分のデザイン */
+#registration .post{
+    width:30%;
+}
+/* 利用規約 */
+#registration #consent{
+    display: flex;
+    justify-content: flex-end;
+    padding:3%;
+    font-size:13px;
+}
+#registration #consent a{
+    text-decoration: underline;
+}
+#registration #consent input[type="checkbox"]{
+    width:3%;
+    margin-right:2%;
+    position:relative;
+	top:3px;
+}

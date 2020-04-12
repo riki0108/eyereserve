@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+body{
+    background-color: #D7EEFF;
+}
+
+#logo{
+    width:20%;
+    margin:0 auto;
+    margin-top:4%;
+    margin-bottom:2%;
+    text-align: center;
+}
+
+#main{
+    background-color: white;
+    width:40%;
+    margin:0 auto;
+    border-radius: 1%;
+}
+
+/* エラーメッセージボックスの編集 */
+#login #errorMsg{
+    width:85%;
+    margin:0 auto;
+    padding-bottom:5%;
+}
+#login #errorMsg ul li{
+    color:#f87e7e;
+}
+
+
+
+/* ログイン画面のデザイン */
+#login{
+    padding:5%;
+}
+#login form{
+    text-align: center;
+}
+#login form input{
+    margin-bottom:3%;
+    padding:2%;
+    width:85%;
+    outline: none;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size:14px;
+}
+/* 入力欄をファーカスしたときに色を変える */
+#login form input:focus,
+#registration form input:focus{
+    box-shadow: 0 0 7px #3498db;
+    border: 1px solid #3498db;
+}
+/* 送信ボタンのデザイン */
+#login form input[type="submit"],
+#registration form input[type="submit"]{
+    display       : inline-block;
+    font-size     : 14pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 14px 0px;   /* 余白       */
+    background    : #11baae;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    opacity       : 0.9;         /* 透明度     */
+    transition    : .3s;         /* なめらか変化 */
+}
+#login form input[type="submit"]:hover,
+#registration form input[type="submit"]:hover{
+    opacity: 0.7;
+}

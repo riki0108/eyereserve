@@ -1,0 +1,215 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+header,main,aside{
+    padding-right:10%;
+    padding-left:10%;
+    padding-top:1%;
+}
+
+
+/* ヘッダー */
+/* 一番上のリンク */
+#small{
+    display: flex;
+    justify-content: flex-end;
+}
+#small p:first-child{
+    margin-right:30px;
+}
+/* ナビゲーション */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ロゴ */
+#logo img{
+    width:120px;
+    height:auto;
+}
+#logo{
+    width:120px;
+    height:auto;
+}
+/* リンク */
+nav ul{
+    width:600px;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li a:hover{
+    color: #008dde;
+}
+/* ナビゲーションのユーザー名 */
+#user{
+    color:#008dde;
+}
+#user:hover{
+    color:orange;
+}
+/* ナビゲーションのメールアイコン */
+#unreadMessageCount{
+    width:50px;
+}
+#unreadMessageCount img{
+    width:30px;
+    height:auto;
+    display: block;
+    margin:0 auto;
+}
+
+
+/* メイン */
+#main{
+    width:60%;
+    margin:0 auto;
+    margin-top:3%;
+    margin-bottom:3%;
+    padding:3%;
+    border:solid 2px #808080;
+    border-radius:3px;
+}
+
+/* エラーメッセージボックスの編集 */
+main #errorMsg{
+    width:60%;
+    margin:0 auto;
+    padding-top: 5%;
+}
+main #errorMsg ul li{
+    color:#f87e7e;
+}
+
+#main form{
+    text-align: center;
+}
+#main form p{
+    text-align: left;
+    padding-bottom:3%;
+}
+#main form>label{
+    text-align: left;
+    display:block;
+    margin-top:2%;
+    padding: 0.25em 0.5em;/*上下 左右の余白*/
+    font-size: 16px;
+    width: 100%;
+    border-left: solid 5px #7db4e6;/*左線*/
+}
+.required{
+    background-color:red;
+    color:white;
+    padding:1%;
+    border-radius:3px;
+}
+/* 入力欄をファーカスしたときに色を変える */
+#main form input:focus{
+    box-shadow: 0 0 7px #3498db;
+    border: 1px solid #3498db;
+}
+/* インプットとテキストエリアのデザイン */
+#main form input,
+#main form textarea{
+    margin-bottom:3%;
+    padding:2%;
+    width:85%;
+    outline: none;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size:14px;
+}
+/* 送信ボタンのデザイン */
+#main form input[type="submit"]{
+    display       : inline-block;
+    font-size     : 14pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 14px 0px;   /* 余白       */
+    background    : #11baae;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    opacity       : 0.9;         /* 透明度     */
+    transition    : .3s;         /* なめらか変化 */
+}
+#main form input[type="submit"]:hover{
+    opacity: 0.7;
+}
+
+
+
+/* フッターデザイン */
+footer{
+    background-color:#f0f0f0;
+    text-align: center;
+}
+/* 文字色・サイズ */
+footer a{
+    color: #808080;
+    font-size:14px;
+}
+/* 余白 */
+#fWrapper{
+    padding:10%;
+}
+/* フレックスデザイン */
+#fInner{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom:3%;
+    border-bottom:solid 1px #808080
+}
+/* サービス一覧 */
+#fService{
+    padding-right:3%;
+    border-right:solid 1px #808080;
+}
+/* サイトマップ */
+#fSitemap{
+    display: flex;
+    justify-content: space-around;
+    padding-right:3%;
+    border-right:solid 1px #808080;
+}
+#fSitemap ul li{
+    padding-bottom:5%;
+}
+/* 会員コンテンツ */
+#fMember{
+    padding-right:3%;
+    border-right:solid 1px #808080;
+}
+/* ヘルプ */
+#fHelp{
+    padding-right:4%;
+    border-right:solid 1px #808080;
+}
+#fHelp ul li{
+    padding-bottom:5%;
+}
+/* モバイル */
+#fMoble{
+    padding-right:4%;
+}
+#fMoble ul li{
+    padding-bottom:5%;
+}
+/* 会社概要 */
+#fCorporate{
+    padding:3%;
+}
+#fCorporate ul{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom:5%;
+}

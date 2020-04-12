@@ -1,0 +1,403 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+header,main,aside{
+    padding-right:10%;
+    padding-left:10%;
+    padding-top:1%;
+}
+
+
+/* ヘッダー */
+/* 一番上のリンク */
+#small{
+    display: flex;
+    justify-content: flex-end;
+}
+#small p:first-child{
+    margin-right:30px;
+}
+/* ナビゲーション */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ロゴ */
+#logo img{
+    width:120px;
+    height:auto;
+}
+#logo{
+    width:120px;
+    height:auto;
+}
+/* リンク */
+nav ul{
+    width:600px;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li a:hover{
+    color: #008dde;
+}
+/* ナビゲーションのユーザー名 */
+#user{
+    color:#008dde;
+}
+#user:hover{
+    color:orange;
+}
+/* ナビゲーションのメールアイコン */
+#unreadMessageCount{
+    width:50px;
+}
+#unreadMessageCount img{
+    width:30px;
+    height:auto;
+    display: block;
+    margin:0 auto;
+}
+
+/* スライドショー */
+.slider{
+    margin-top:5%;
+}
+.slider img{
+    max-width: 100%;
+    height: auto;
+    width /***/:auto;
+    margin:0 auto;
+}
+
+
+/* 検索項目 */
+#search{
+    padding:3%;
+    padding-top:8%;
+}
+/* キーワード検索窓 */
+#keyword{
+    display: flex;
+    justify-content: space-around;
+}
+/* キーワード入力ボックス */
+#search #keyword input:nth-child(1){
+    width: 70%;
+    padding:2%;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px #ccc solid;
+    font-size: 16px;
+}
+/* 検索ボタン */
+#search #keyword input[type='submit']{
+    width:8%;
+    padding:1%;
+    display: inline-block;
+    text-align: center;
+    font-size:18px;
+    border-style: none;
+    background: linear-gradient(45deg,#006198 0,#0085D1 100%);
+    color:white;
+    border-radius: 3px;
+}
+#search #keyword input[type='submit']:hover{
+    background: #006198;
+}
+/* こだわり条件検索 */
+#conditions_search{
+    display: flex;
+    justify-content: space-around;
+    padding-top:3%;
+}
+#conditions_search select{
+    display: block;
+    width:20%;
+    height:5vh;
+    font-size:14px;
+    background-color:white;
+    color:black;
+}
+#area_search{
+    width:650px;
+    display: flex;
+    justify-content: space-around;
+}
+#area_search select{
+    display: block;
+    margin-left:5%;
+    width:30%;
+}
+/* こだわり条件検索ボタン */
+#conditions_search_button{
+    padding-top:3%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+#conditions_search_button input[type='reset'],#conditions_search_button input[type='submit']{
+    border-style: none;
+    border-radius: 3px;
+    width:25%;
+    padding-right:2%;
+    padding-left:2%;
+    padding:2%;
+    font-size:18px;
+}
+#conditions_search_button input[type='reset']{
+    background-color:white;
+    border:2px solid #666;
+    color:#333;
+}
+#conditions_search_button input[type='reset']:hover{
+    border:solid 2px #006198;
+    color: #006198;
+}
+#conditions_search_button input[type='submit']{
+    background: linear-gradient(45deg,#006198 0,#0085D1 100%);
+    color:white;
+    border:none;
+}
+#conditions_search_button input[type='submit']:hover{
+    background: #006198;
+}
+
+
+/* コンテンツの箱 */
+article{
+    padding:3%;
+}
+/* コンテンツのタイトルデザイン */
+article h2{
+    font-size: 24px;
+    font-weight: lighter;
+    color:#333;
+    padding-bottom:3%;
+}
+
+
+/* オススメのお店 */
+#recomme{
+    padding-left:300px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-around;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+/* スクロールバーのデザイン */
+/*スクロールバーの横幅指定*/
+#recomme::-webkit-scrollbar {
+    height:10px;
+}
+/*スクロールバーの背景色・角丸指定*/
+#recomme::-webkit-scrollbar-track {
+    border-radius: 10px;
+	background: #f2f2f2;
+}
+/*スクロールバーの色・角丸指定*/
+#recomme::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+	background:#555;
+}
+/* コンテンツ内容 */
+.items{
+    width:30%;
+    padding:3%;
+    background-color: #eee;
+    display: inline-block;
+    text-align: center;
+}
+.items p{
+    padding-top:4%;
+}
+.items img{
+    width:200px;
+    text-align: center;
+}
+
+
+/* 人気ショップランキング */
+/* アイテムランキング */
+/* カード型デザイン */
+#shop_ranking,#item_ranking{
+    padding:2%;
+    text-align: center;
+    background-color:#eee;
+}
+#shop_ranking ul,#item_ranking ul{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+/* ランキング表示 */
+#shop_ranking ul li,#item_ranking ul li{
+    counter-increment: rank;
+    position: relative;
+    overflow: hidden;
+}
+#shop_ranking ul li::before,#item_ranking ul li::before{
+    content: "";
+    background-color: #FF0461;
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: -50%;
+    top: 0;
+}
+#shop_ranking ul li::after,#item_ranking ul li::after{
+    content: counter(rank);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: initial;
+    text-align: center;
+    width: 1.5em;
+    position: absolute;
+    left: .3em;
+    top: .3em;
+}
+/* カード */
+#shop_ranking ul li,#item_ranking ul li{
+    width:30%;
+    margin:0 auto;
+    margin-top:2%;
+    background-color:white;
+    border-radius: 5px;
+}
+/* 画像 */
+.card img{
+    width:200px;
+    padding:3%;
+    margin-top:15%;
+    margin-bottom:15%;
+}
+/* 店名 */
+.card p{
+    padding-top:5%;
+    padding-bottom:10%;
+}
+
+
+/* システムの導入案内 */
+#store{
+    padding:3%;
+}
+/* タイトルデザイン */
+#store h3{
+    width:80%;
+    margin:0 auto;
+    text-align: center;
+    font-size:24px;
+    padding: 0.5em;/*文字周りの余白*/
+    color: #364e96;/*文字色*/
+    padding: 0.5em 0;/*上下の余白*/
+    border-top: solid 3px #364e96;/*上線*/
+    border-bottom: solid 3px #364e96;/*下線*/
+}
+#store_button{
+    padding-top:5%;
+    display: flex;
+    justify-content: space-around;
+}
+/* ボタンデザイン */
+#store a{
+    width:30%;
+    padding:30%;
+    position: relative;
+    display: inline-block;
+    padding: 2%;
+    text-decoration: none;
+    color: #FFF;
+    background: #03A9F4;/*色*/
+    border: solid 1px #0f9ada;/*線色*/
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    font-size:20px
+}
+#store a:active{
+    border: solid 1px #03A9F4;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+
+/* フッターデザイン */
+footer{
+    background-color:#f0f0f0;
+    text-align: center;
+}
+/* 文字色・サイズ */
+footer a{
+    color: #808080;
+    font-size:14px;
+}
+/* 余白 */
+#fWrapper{
+    padding:10%;
+}
+/* フレックスデザイン */
+#fInner{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom:3%;
+    border-bottom:solid 1px #808080
+}
+/* サービス一覧 */
+#fService{
+    padding-right:3%;
+    border-right:solid 1px #808080;
+}
+/* サイトマップ */
+#fSitemap{
+    display: flex;
+    justify-content: space-around;
+    padding-right:3%;
+    border-right:solid 1px #808080;
+}
+#fSitemap ul li{
+    padding-bottom:5%;
+}
+/* 会員コンテンツ */
+#fMember{
+    padding-right:3%;
+    border-right:solid 1px #808080;
+}
+/* ヘルプ */
+#fHelp{
+    padding-right:4%;
+    border-right:solid 1px #808080;
+}
+#fHelp ul li{
+    padding-bottom:5%;
+}
+/* モバイル */
+#fMoble{
+    padding-right:4%;
+}
+#fMoble ul li{
+    padding-bottom:5%;
+}
+/* 会社概要 */
+#fCorporate{
+    padding:3%;
+}
+#fCorporate ul{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom:5%;
+}
